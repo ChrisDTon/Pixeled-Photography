@@ -186,11 +186,11 @@ Both client-side processing, or server-side processing depending on device capab
 
 Never store actual high-res images directly inside a database row because it destroys the database's performance. Instead, upload the image to File Storage, get back a URL string (e.g., https://storage.com), and save that text URL inside the database.
 
-pixeled-photography/
-  ├── frontend/             # Next.js + Tailwind UI (Shared by both backends)
-  ├── backend-serverless/   # API routes tailored for Vercel deployment
-  ├── backend-selfhosted/   # Express.js server + Dockerfile for your private server
-  └── docker-compose.yml    # Spins up Postgres, MinIO, and Express locally with 1 click
+pixeled-photography/ \
+├── frontend/             # Next.js + Tailwind UI (Shared by both backends) \
+├── backend-serverless/   # API routes tailored for Vercel deployment \
+├── backend-selfhosted/   # Express.js server + Dockerfile for your private server \
+└── docker-compose.yml    # Spins up Postgres, MinIO, and Express locally with 1 click
 
 // Automatically switch the target based on where the app is running
 const API_URL = process.env.NEXT_PUBLIC_ENVIRONMENT === 'self-hosted'
